@@ -37,6 +37,8 @@ pantsSelect.addEventListener('change', () => {
 function displayCharacter() {
     headImage.src = 'assets/character/' + character.head + '-head.png';
     // > set the middle and pants images .src property based on the character middle and pants properties
+    middleImage.src = 'assets/character/' + character.middle + '-middle.png';
+    pantsImage.src = 'assets/character/' + character.pants + '-pants.png';
 }
 
 function displayPhrases() {
