@@ -26,12 +26,16 @@ headSelect.addEventListener('change', () => {
 
 middleSelect.addEventListener('change', () => {
     // > set the character middle from the value of the middle <select>
+    character.middle = middleSelect.value;
     // > redisplay the character
+    displayCharacter();
 });
 
 pantsSelect.addEventListener('change', () => {
     // > set the character head from the value of the head <select>
+    character.pants = pantsSelect.value;
     // > redisplay the character
+    displayCharacter();
 });
 
 function displayCharacter() {
