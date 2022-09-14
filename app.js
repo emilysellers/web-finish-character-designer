@@ -51,19 +51,21 @@ function displayPhrases() {
 
     for (const phrase of character.phrases) {
         // > create an <li> element
-        const newPhrase = document.createElement('li');
+        const li = document.createElement('li');
         // > set the text of the li to the phrase
-        newPhrase.textContent = phrase;
+        li.textContent = phrase;
         // > append the <li> to the phrases list
-        phraseList.append(newPhrase);
+        phraseList.append(li);
     }
 }
 
 addButton.addEventListener('click', () => {
     // > Get the phrase from the value of the phrase input
+    const newPhrase = phraseInput.value;
     // > Use ".push" to add the phrase to the end of the character phrases array
+    character.phrases.push(newPhrase);
     // > Re-display the phrases
-
+    displayPhrases();
     // reset the input
     phraseInput.value = '';
 });
